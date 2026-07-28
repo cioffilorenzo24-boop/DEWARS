@@ -1,0 +1,16 @@
+header p {
+  color: #b6b6b6;
+}
+
+.title-colour {
+  color: #93b7fb;
+}
+
+header h1 {
+  color: #d25959;
+  font-size: 45px;
+}
+
+header {
+  text-align: center;
+}
