@@ -1,14 +1,141 @@
 .challenge-div {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
-.vs{
-    color: yellow;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 20px;
-    align-items: center;
-    justify-content: space-between;
+.vs {
+  color: yellow;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.challengersA,
+.challengersB {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.challengersA {
+  border: 2px solid #93b7fb;
+}
+
+.challengersB {
+  border: 2px solid #d25959;
+}
+
+.img-challenger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 15px 15px 10px 15px;
+  height: 220px;
+  box-shadow: inset 0 -40px 40px black;
+}
+
+.challenger-dates p, .challenger-dates h3 {
+  margin-bottom: 0;
+}
+
+.dev-class {
+  width: 50px;
+  padding: 6px;
+  font-size: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dev-A {
+  background-color: #93b7fb;
+  color: black;
+}
+
+.dev-B {
+  background-color: #d25959;
+  color: white;
+}
+
+.average-stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.stats {
+  background-color: #00374f;
+  padding: 10px;
+  width: 33%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.skills-name {
+  color: #b9acac;
+  font-size: 11px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.challenger-dates p {
+  color: #e4e4e4;
+  font-size: 10px;
+}
+
+.barr-container {
+  background-color: #00374f;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+}
+
+.upperSide-barr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lowerSide-barr {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #0a2d36;
+}
+
+.bar {
+  height: 8px;
+  border-radius: 10px;
+}
+
+.barr-stats {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-frontEnd {
+  background-color: cornflowerblue;
+}
+
+.bar-beckEnd {
+  background-color: #18e118;
+}

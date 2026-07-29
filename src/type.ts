@@ -79,11 +79,11 @@ const developers: Dev[] = [
   },
   {
     id: 5,
-    imageUrl: "https://i.pravatar.cc/600?img=53",
+    imageUrl: "https://i.pravatar.cc/600?img=54",
     firstname: "Alex",
     lastname: "Moretti",
     birthDate: "2002-07-30",
-    gender: "unknown",
+    gender: "m",
     skills: [
       { label: "html/css", type: "front-end", value: 70 },
       { label: "javascript", type: "front-end", value: 82 },
@@ -109,5 +109,5 @@ const developers: Dev[] = [
   },
 ];
 
-export type { Dev };
+export type { Dev, Skill };
 export { developers }

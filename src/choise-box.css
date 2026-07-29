@@ -18,16 +18,14 @@ button {
   font-weight: bold;
   border: 2px solid grey;
   cursor: pointer;
-  transition: transform 1s;
+  transition: all 1s;
 }
 
 .btn-a:hover {
-  transform: translateY(-6px);
   border: 2px solid #93b7fb;
   color: #93b7fb;
 }
 .btn-b:hover {
-  transform: translateY(-6px);
   border: 2px solid #d25959;
   color: #d25959;
 }
@@ -60,4 +58,22 @@ button {
   gap: 10px;
   justify-content: space-between;
   background-color: #00002a;
+}
+
+.selected-A {
+  border: 2px solid #93b7fb;
+  transform: translateY(-3px);
+}
+.selected-B {
+  border: 2px solid #d25959;
+  transform: translateY(-3px);
+}
+
+.active-A {
+  transform: translateY(-6px);
+  border: 2px solid #93b7fb;
+}
+.active-B {
+  transform: translateY(-6px);
+  border: 2px solid #d25959;
 }
