@@ -25,11 +25,11 @@ const developers: Dev[] = [
     birthDate: "1998-05-14",
     gender: "m",
     skills: [
-      { label: "html/css", type: "front-end", value: 90 },
-      { label: "javascript", type: "front-end", value: 85 },
-      { label: "react", type: "front-end", value: 80 },
-      { label: "node.js", type: "back-end", value: 65 },
-      { label: "algorithms", type: "back-end", value: 70 },
+      { label: "HTML/CSS", type: "front-end", value: 90 },
+      { label: "JavaScript", type: "front-end", value: 85 },
+      { label: "React", type: "front-end", value: 80 },
+      { label: "Node.js", type: "back-end", value: 65 },
+      { label: "Algorithms", type: "back-end", value: 70 },
     ],
   },
   {
@@ -40,11 +40,11 @@ const developers: Dev[] = [
     birthDate: "2001-09-22",
     gender: "f",
     skills: [
-      { label: "html/css", type: "front-end", value: 95 },
-      { label: "javascript", type: "front-end", value: 90 },
-      { label: "react", type: "front-end", value: 88 },
-      { label: "node.js", type: "back-end", value: 40 },
-      { label: "algorithms", type: "back-end", value: 60 },
+      { label: "HTML/CSS", type: "front-end", value: 95 },
+      { label: "JavaScript", type: "front-end", value: 90 },
+      { label: "React", type: "front-end", value: 88 },
+      { label: "Node.js", type: "back-end", value: 40 },
+      { label: "Algorithms", type: "back-end", value: 60 },
     ],
   },
   {
@@ -55,11 +55,11 @@ const developers: Dev[] = [
     birthDate: "1995-12-03",
     gender: "m",
     skills: [
-      { label: "html/css", type: "front-end", value: 60 },
-      { label: "javascript", type: "front-end", value: 75 },
-      { label: "react", type: "front-end", value: 50 },
-      { label: "node.js", type: "back-end", value: 92 },
-      { label: "algorithms", type: "back-end", value: 85 },
+      { label: "HTML/CSS", type: "front-end", value: 60 },
+      { label: "JavaScript", type: "front-end", value: 75 },
+      { label: "React", type: "front-end", value: 50 },
+      { label: "Node.js", type: "back-end", value: 92 },
+      { label: "Algorithms", type: "back-end", value: 85 },
     ],
   },
   {
@@ -70,11 +70,11 @@ const developers: Dev[] = [
     birthDate: "1999-03-18",
     gender: "f",
     skills: [
-      { label: "html/css", type: "front-end", value: 85 },
-      { label: "javascript", type: "front-end", value: 80 },
-      { label: "react", type: "front-end", value: 75 },
-      { label: "node.js", type: "back-end", value: 78 },
-      { label: "algorithms", type: "back-end", value: 80 },
+      { label: "HTML/CSS", type: "front-end", value: 85 },
+      { label: "JavaScript", type: "front-end", value: 80 },
+      { label: "React", type: "front-end", value: 75 },
+      { label: "Node.js", type: "back-end", value: 78 },
+      { label: "Algorithms", type: "back-end", value: 80 },
     ],
   },
   {
@@ -85,11 +85,11 @@ const developers: Dev[] = [
     birthDate: "2002-07-30",
     gender: "m",
     skills: [
-      { label: "html/css", type: "front-end", value: 70 },
-      { label: "javascript", type: "front-end", value: 82 },
-      { label: "react", type: "front-end", value: 65 },
-      { label: "node.js", type: "back-end", value: 70 },
-      { label: "algorithms", type: "back-end", value: 90 },
+      { label: "HTML/CSS", type: "front-end", value: 70 },
+      { label: "JavaScript", type: "front-end", value: 82 },
+      { label: "React", type: "front-end", value: 65 },
+      { label: "Node.js", type: "back-end", value: 70 },
+      { label: "Algorithms", type: "back-end", value: 90 },
     ],
   },
   {
@@ -100,14 +100,14 @@ const developers: Dev[] = [
     birthDate: "1997-11-05",
     gender: "m",
     skills: [
-      { label: "html/css", type: "front-end", value: 75 },
-      { label: "javascript", type: "front-end", value: 70 },
-      { label: "react", type: "front-end", value: 60 },
-      { label: "node.js", type: "back-end", value: 88 },
-      { label: "algorithms", type: "back-end", value: 82 },
+      { label: "HTML/CSS", type: "front-end", value: 75 },
+      { label: "JavaScript", type: "front-end", value: 70 },
+      { label: "React", type: "front-end", value: 60 },
+      { label: "Node.js", type: "back-end", value: 88 },
+      { label: "Algorithms", type: "back-end", value: 82 },
     ],
   },
 ];
 
 export type { Dev, Skill };
-export { developers }
+export { developers };

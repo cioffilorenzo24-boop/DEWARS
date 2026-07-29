@@ -1,7 +1,7 @@
 import type { Dev } from "../type";
 
 
-function GetAverage(currentDev: Dev) {
+export function GetAverage(currentDev: Dev) {
   let frontendScore = 0;
   let frontendCount = 0;
   let beckendScore = 0;

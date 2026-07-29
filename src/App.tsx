@@ -2,10 +2,12 @@ import "./App.css";
 import "./header.css";
 import "./choise-box.css";
 import "./challenge.css";
+import "./footer.css";
 import { GetDevCard } from "./function/choise";
 import { developers } from "./type";
 import { useState } from "react";
 import { ChallengerDev } from "./function/challengers";
+import { BetterChoises } from "./function/footer";
 import type { Dev } from "./type";
 
 function App() {
@@ -16,8 +18,10 @@ function App() {
   const manageDev = (selectedDev: Dev) => {
     if (btn === "A") {
       setCurrentDevA(selectedDev);
+      setBtn(null);
     } else if (btn === "B") {
       setCurrentDevB(selectedDev);
+      setBtn(null);
     }
   };
 
@@ -66,7 +70,12 @@ function App() {
             {ChallengerDev(currentDevB, "DEV B")}
           </div>
         </section>
-        <footer></footer>
+        <footer>
+          <h2>Chi dovresti scegliere?</h2>
+          <div className="betterChoiseDiv">
+            {BetterChoises(currentDevA, currentDevB)}
+          </div>
+        </footer>
       </main>
     </>
   );
