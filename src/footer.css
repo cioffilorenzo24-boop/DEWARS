@@ -1,0 +1,56 @@
+footer {
+  border: 3px solid #00374f;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #00042d;
+}
+
+.betterDev {
+  width: 49%;
+  background-color: #00374f;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+
+footer h2 {
+  color: orange;
+  text-align: center;
+}
+
+.betterChoiseDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.bestDev {
+  width: 100%;
+  background-color: #01a3014f;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.winner-A {
+  font-weight: bold;
+  color: #93b7fb;
+}
+.winner-B {
+  font-weight: bold;
+  color: #d25959;
+}
