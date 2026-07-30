@@ -139,3 +139,24 @@
 .bar-beckEnd {
   background-color: #18e118;
 }
+
+@media (max-width: 767px) {
+  .challenge-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .challengersA, .challengersB {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .challenge-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .challengersA, .challengersB {
+    width: 100%;
+  }
+}
+
