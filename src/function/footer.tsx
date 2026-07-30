@@ -1,7 +1,7 @@
 import type { Dev } from "../type";
 import { GetAverage } from "./challengers";
 
-export function BetterChoises(currentDevA: Dev, currentDevB: Dev) {
+export function BetterChoises(currentDevA: Dev | null, currentDevB: Dev | null) {
   if (currentDevA === null || currentDevB === null) return;
 
   const A = GetAverage(currentDevA);
