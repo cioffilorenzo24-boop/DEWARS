@@ -25,7 +25,7 @@ export function BetterChoises(currentDevA: Dev | null, currentDevB: Dev | null) 
         }
         return (
           <>
-            <div className="betterDev">
+            <div className="betterDev" style={{borderLeft: '4px solid #93b7fb'}}>
               Se vuoi il migliore in {skillA.label}, scegli
               <span className={winnerClass}>{winnerDev}</span>
             </div>
@@ -50,6 +50,9 @@ export function BetterChoises(currentDevA: Dev | null, currentDevB: Dev | null) 
           <>
             <div
               className={statA.label !== "OVERALL" ? "betterDev" : "bestDev"}
+              style = {{
+                borderLeft: statA.label !== 'OVERALL' ? "4px solid #d25959" : "4px solid #ffff00"
+              }}
             >
               {statA.label === "OVERALL"
                 ? "Complessivamente, scegli"

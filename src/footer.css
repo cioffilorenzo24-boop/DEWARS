@@ -8,6 +8,7 @@
   align-items: center;
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 footer h2 {
@@ -44,7 +45,10 @@ footer h2 {
 .winner-B {
   font-weight: bold;
   color: #d25959;
+  color: ye;
 }
+
+
 
 @media (max-width: 767px) {
   .betterDev {
@@ -56,4 +60,3 @@ footer h2 {
     display: inline;
   }
 }
-
