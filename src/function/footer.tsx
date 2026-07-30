@@ -4,17 +4,17 @@ import { GetAverage } from "./challengers";
 export function BetterChoises(currentDevA: Dev, currentDevB: Dev) {
   if (currentDevA === null || currentDevB === null)
     return 
-
+  
   const A = GetAverage(currentDevA);
   const B = GetAverage(currentDevB);
   let winnerClass = "";
   let winnerFE = "";
   let winnerFEClass = "";
 
-  if (A.averageFrontendScore > B.averageFrontendScore) {
+  if (A[0].value > B[0].value) {
     winnerFE = currentDevA.firstname + " " + currentDevA.lastname;
     winnerFEClass = "winner-A";
-  } else if (A.averageFrontendScore < B.averageFrontendScore) {
+  } else if (A[0].value < B[0].value) {
     winnerFE = currentDevB.firstname + " " + currentDevB.lastname;
     winnerFEClass = "winner-B";
   } else {
@@ -24,10 +24,10 @@ export function BetterChoises(currentDevA: Dev, currentDevB: Dev) {
   let winnerBE = "";
   let winnerBEClass = "";
 
-  if (A.averageBeckendScore > B.averageBeckendScore) {
+  if (A[1].value > B[1].value) {
     winnerBE = currentDevA.firstname + " " + currentDevA.lastname;
     winnerBEClass = "winner-A";
-  } else if (A.averageBeckendScore < B.averageBeckendScore) {
+  } else if (A[1].value < B[1].value) {
     winnerBE = currentDevB.firstname + " " + currentDevB.lastname;
     winnerBEClass = "winner-B";
   } else {
@@ -35,10 +35,10 @@ export function BetterChoises(currentDevA: Dev, currentDevB: Dev) {
   }
 
   let BestDev = "";
-  if (A.overall > B.overall) {
+  if (A[2].value > B[2].value) {
     BestDev = currentDevA.firstname + " " + currentDevA.lastname;
     winnerClass = "winner-A";
-  } else if (A.overall < B.overall) {
+  } else if (A[2].value < B[2].value) {
     BestDev = currentDevB.firstname + " " + currentDevB.lastname;
     winnerClass = "winner-B";
   } else {
