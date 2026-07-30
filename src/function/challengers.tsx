@@ -1,6 +1,5 @@
 import type { Dev } from "../type";
 
-
 export function GetAverage(currentDev: Dev) {
   let frontendScore = 0;
   let frontendCount = 0;
@@ -18,7 +17,9 @@ export function GetAverage(currentDev: Dev) {
       beckendCount++;
     }
   });
-  const averageFrontendScore = Number((frontendScore / frontendCount).toFixed(1));
+  const averageFrontendScore = Number(
+    (frontendScore / frontendCount).toFixed(1),
+  );
   const averageBeckendScore = Number((beckendScore / beckendCount).toFixed(1));
 
   currentDev.skills.forEach((s) => {
@@ -27,41 +28,48 @@ export function GetAverage(currentDev: Dev) {
   });
 
   const overall = Number((totalSum / totalSumCount).toFixed(1));
-  return {
-    averageFrontendScore,
-    averageBeckendScore,
-    overall,
-  };
+  return [
+    { label: "FRONT-END", value: averageFrontendScore },
+    { label: "BACK-END", value: averageBeckendScore },
+    { label: "OVERALL", value: overall },
+  ];
 }
 
 function OverallBarr(currentDev: Dev) {
   return (
     <>
-    {currentDev.skills.map((s) => {
-      return (
-        <div className="barr-container">
-          <div className="upperSide-barr">
-            <span>
-              <strong>{s.label.toUpperCase()}</strong> <small>{s.type}</small>
-            </span>
-            <span><small><b>{s.value}/100</b></small></span>
+      {currentDev.skills.map((s) => {
+        return (
+          <div className="barr-container">
+            <div className="upperSide-barr">
+              <span>
+                <strong>{s.label.toUpperCase()}</strong> <small>{s.type}</small>
+              </span>
+              <span>
+                <small>
+                  <b>{s.value}/100</b>
+                </small>
+              </span>
+            </div>
+            <div className="lowerSide-barr">
+              <div
+                className={`bar ${s.type === "front-end" ? "bar-frontEnd" : "bar-beckEnd"} `}
+                style={{ width: `${s.value}%` }}
+              ></div>
+            </div>
           </div>
-          <div className="lowerSide-barr">
-            <div className={`bar ${s.type === 'front-end' ? 'bar-frontEnd' : 'bar-beckEnd'} `} style={{width: `${s.value}%`}}></div>
-          </div>
-        </div>
-      )
-    })}
+        );
+      })}
     </>
-  )
+  );
 }
-
-
 
 export function ChallengerDev(currentDev: Dev | null, label: string) {
   if (currentDev === null) {
     return <p style={{ color: "white" }}>Seleziona uno sfidante</p>;
   }
+
+  const overallArray = GetAverage(currentDev);
 
   return (
     <>
@@ -72,37 +80,37 @@ export function ChallengerDev(currentDev: Dev | null, label: string) {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          borderTopLeftRadius: '10px',
-          borderTopRightRadius: '10px'
+          borderTopLeftRadius: "10px",
+          borderTopRightRadius: "10px",
         }}
       >
-        <div className={`dev-class ${label === 'DEV A' ? 'dev-A' : 'dev-B'}`}>{label}</div>
+        <div className={`dev-class ${label === "DEV A" ? "dev-A" : "dev-B"}`}>
+          {label}
+        </div>
         <div className="challenger-dates">
           <h3>
             {currentDev.firstname} {currentDev.lastname}
           </h3>
           <p>
-            Nato/a il {currentDev.birthDate}   Genere: {currentDev.gender === 'f' ? 'Femminile' : 'Maschile'}
+            Nato/a il {currentDev.birthDate} Genere:{" "}
+            {currentDev.gender === "f" ? "Femminile" : "Maschile"}
           </p>
         </div>
       </div>
       <div className="average-stats">
-        <div className="stats">
-          <div className="skills-name">FRONT-END</div>
-          <b>{GetAverage(currentDev).averageFrontendScore}</b>
-        </div>
-        <div className="stats">
-          <div className="skills-name">BECK-END</div>
-          <b>{GetAverage(currentDev).averageBeckendScore}</b>
-        </div>
-        <div className="stats">
-          <div className="skills-name">OVERALL</div>
-          <b>{GetAverage(currentDev).overall}</b>
-          </div>
+        {overallArray.map((o) => {
+          return (
+            <>
+              <div className="stats">
+                <div className="skills-name">{o.label.toUpperCase()}</div>
+                <b>{o.value}</b>
+              </div>
+            </>
+          );
+        })}
       </div>
-      <div className="barr-stats">
-        {OverallBarr(currentDev)}
-      </div>
+
+      <div className="barr-stats">{OverallBarr(currentDev)}</div>
     </>
   );
 }
