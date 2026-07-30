@@ -22,3 +22,14 @@ main {
   width: 90%;
   margin: 0 auto;
 }
+
+footer {
+  border: 3px solid #00374f;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #00042d;
+}

@@ -77,3 +77,23 @@ button {
   transform: translateY(-6px);
   border: 2px solid #d25959;
 }
+
+@media (max-width: 767px) {
+  .dev-Card {
+    width: 48%;
+  }
+  .choise-div {
+    flex-wrap: wrap;
+  }
+  .btn-div {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dev-Card {
+    width: 32%;
+  }
+  .choise-div {
+    flex-wrap: wrap;
+  }
+}
